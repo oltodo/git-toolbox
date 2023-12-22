@@ -5,7 +5,7 @@
     "name": "Nicolas Bazille",
     "email": "oltodo@msn.com"
   },
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "bin": {
     "gt": "./dist/index.js"
