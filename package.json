@@ -43,5 +43,10 @@
     "*": [
       "prettier --write --ignore-unknown"
     ]
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "read-pkg": "^9.0.1",
+    "simple-git": "^3.21.0"
   }
 }
