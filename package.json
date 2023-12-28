@@ -5,7 +5,7 @@
     "name": "Nicolas Bazille",
     "email": "oltodo@msn.com"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "bin": {
     "gtb": "./dist/index.js"
