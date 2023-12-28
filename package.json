@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "commander": "^11.1.0",
-    "inquirer": "^9.2.12",
+    "enquirer": "^2.4.1",
     "read-pkg": "^9.0.1",
     "simple-git": "^3.21.0"
   }
