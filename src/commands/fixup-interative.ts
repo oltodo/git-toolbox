@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import { DefaultLogFields, GitError } from "simple-git";
+import { GitError } from "simple-git";
 import { SubCommand } from "../types.js";
 import enquirer from "enquirer";
 
@@ -11,17 +11,17 @@ const createFixupInteractiveCommand: SubCommand = ({ git }) => {
       try {
         const commits = await git.log({ maxCount: 100 });
 
-        const { commit } = await enquirer.prompt<{ commit: DefaultLogFields }>({
+        const { commit } = await enquirer.prompt<{ commit: string }>({
           type: "select",
           name: "commit",
           message: "Pick the commit",
           choices: commits.all.map((commit) => ({
-            name: commit.message,
-            value: commit,
+            name: commit.hash,
+            message: commit.message,
           })),
         });
 
-        await git.raw("commit", "--fixup", commit.hash);
+        await git.raw("commit", "--fixup", commit);
       } catch (error) {
         if (error instanceof GitError) {
           console.error(error.message);
